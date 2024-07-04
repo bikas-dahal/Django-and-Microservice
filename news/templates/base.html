@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Your Site Title{% endblock title %}</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-tyI6+GTz3VnK9nM1zR2Bh6GUpN3NTMy6JhGXaD8eGEa3D5s8/L+pBXVI2u8Zt0JN" crossorigin="anonymous">
+    {% block extra_css %}{% endblock extra_css %}
+</head>
+<body>
+    <header>
+        <!-- Navbar -->
+        {% block navbar %}{% endblock navbar %}
+    </header>
+
+    <main role="main" class="container">
+        {% block content %}{% endblock content %}
+    </main>
+
+    <footer class="text-muted py-5">
+        {% block footer %}{% endblock footer %}
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" rel="stylesheet" integrity="sha384-kenU1KFdBIKI6V2x9D8Bq4nVBtGmUyJq9Lk/9g5MjtOnPwI5yR3itZtY7qK0pAl1" crossorigin="anonymous"></script>
+    {% block extra_js %}{% endblock extra_js %}
+</body>
+</html>
