@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     
     'rest_framework',
     'django_extensions',
+    'djongo',
     
 ]
 
@@ -90,6 +91,19 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+from decouple import config
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'NAME': 'Subscription',
+#         'ENFORCE_SCHEMA': False,
+#         'CLIENT': {
+#                 'host': 'mongodb+srv://django-microservice:<password>@<cluster>'
+#         }
+#     }
+# }
 
 
 CELERY_BROKER_URL = 'redis://localhost:6379'
