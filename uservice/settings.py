@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     
     'account',
     'news',
+    'subscription',
     
     'rest_framework',
     'django_extensions',
@@ -106,8 +107,8 @@ from decouple import config
 # }
 
 
-CELERY_BROKER_URL = 'redis://localhost:6379'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_BROKER_URL = 'redis-13570.c100.us-east-1-4.ec2.redns.redis-cloud.com:13570'
+CELERY_RESULT_BACKEND = 'redis-13570.c100.us-east-1-4.ec2.redns.redis-cloud.com:13570'
 
 
 # Password validation

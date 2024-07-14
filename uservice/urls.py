@@ -23,4 +23,9 @@ urlpatterns = [
     # path('api/', include('api.urls')),
     path('', include('account.urls')),
     path('', include('news.urls', namespace='news')),
+    path("subscription/",
+        SubscriptionFormView.as_view(),
+        name="subscription"),
+    path("success/", SuccessView.as_view(),
+        name="success"),
 ]
